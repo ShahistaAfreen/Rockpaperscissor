@@ -1,0 +1,66 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class Rockpaperscissor{
+
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+
+        Random rand = new Random();
+        int computerinput = rand.nextInt(3);
+
+        System.out.println("Choose a number in 0, 1 and 2");
+        System.out.println("0 for Rock");
+        System.out.println("1 for paper");
+        System.out.println("2 for scissor");
+
+         int userinput = sc.nextInt();
+
+        //Deciding about the match output
+
+        if(userinput <=2){
+        if(userinput == computerinput){
+            System.out.println("Match is draw");
+        }
+        else if( computerinput == 1 && userinput == 2 || computerinput ==2 && userinput == 0 || computerinput ==0 && userinput == 1){
+            System.out.println("You won the game!!!");
+            
+        }
+        else 
+        {
+            System.out.println("u lose the game, Better luck next time.");
+        }
+
+      //printing computer choice
+
+       if(computerinput ==0){
+          System.out.println("Computer input was Rock");
+       }
+       else if(computerinput ==1){
+        System.out.println("computer input was paper");
+       }
+       else{
+        System.out.println("computer input was scissors");
+       }
+
+      //printing user choice
+
+       if(userinput ==0){
+        System.out.println("Your input was Rock");
+     }
+     else if(userinput ==1){
+      System.out.println("Your input was paper");
+     }
+     else{
+      System.out.println("Your input was scissors");
+     }
+       
+       
+    }
+
+    else{
+        System.out.println("Invalid input");
+    }
+}
+}
